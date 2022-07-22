@@ -13,8 +13,9 @@ npm: 6.14.4
 python3: 3.7
 mariadb: 10.5.6
 ```
-安装mariadb
+安装mariadb等依赖
 ```
+yum install gcc libffi-devel python3-devel openssl-devel mysql-devel -y
 yum --allowerasing install mariadb-server mariadb -y
 systemctl start mariadb
 ```

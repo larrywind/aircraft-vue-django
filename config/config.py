@@ -4,6 +4,7 @@
 @usage: load config file
 """
 import argparse
+import os
 from collections import defaultdict
 from configparser import ConfigParser
 
@@ -50,7 +51,7 @@ def get_local_settings(conf=None):
     return conf_dict  # ReadOnlyDict(conf_dict)
 
 
-CONFIG_SECTIONS = get_local_settings('app.conf')
+CONFIG_SECTIONS = get_local_settings('./config/app.conf')
 
 CONFIG = dict(CONFIG_SECTIONS["GLOBAL"])
 

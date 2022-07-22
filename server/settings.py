@@ -22,6 +22,9 @@ os.makedirs('logs', exist_ok=True)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'df34@dfkj398)-fgwef+bk-w^^80%bmkjd20s+y(887dc)s6s'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -52,7 +55,6 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "webapp.middleware.SignatureCheckMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
@@ -96,7 +98,7 @@ DATABASES = {
 
 # auth validation
 # https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#auth-custom-user
-AUTH_USER_MODEL = "webapp.Users"
+# AUTH_USER_MODEL = "webapp.Users"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -136,7 +138,7 @@ USE_L10N = True
 STATIC_URL = "/static/"
 STATIC_ROOT = "static"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "web/dist"),
+    os.path.join(BASE_DIR, "web/dist/static"),
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
