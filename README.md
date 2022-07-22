@@ -1,4 +1,4 @@
-# aircraft
+# aircraft-vue-django
 
 ## 简介
 
@@ -18,19 +18,19 @@ mariadb: 10.5.6
 yum --allowerasing install mariadb-server mariadb -y
 systemctl start mariadb
 ```
-在文件夹`./aircraft`下运行`pre_install.sh`部署npm和node环境
+在文件夹`./aircraft-vue-django`下运行`pre_install.sh`部署npm和node环境
 
 ```
 bash pre_install.sh
 ```
 
-在文件夹`./aircraft`下运行`install.sh`安装依赖
+在文件夹`./aircraft-vue-django`下运行`install.sh`安装依赖
 
 ```
 bash install.sh
 ```
 
-在文件夹`/aircraft`下运行以下指令开启服务
+在文件夹`/aircraft-vue-django`下运行以下指令开启服务
 
 ```
 python3 manage.py runserver 0.0.0.0:<your port>

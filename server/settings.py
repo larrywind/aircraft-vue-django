@@ -27,7 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    '175.27.157.94',
+    'bigwind.cloud',
+    'www.bigwind.cloud',
 ]
 
 # Application definition
@@ -59,7 +62,7 @@ ROOT_URLCONF = "webapp.urls"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'web/build/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'web/dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,7 +136,7 @@ USE_L10N = True
 STATIC_URL = "/static/"
 STATIC_ROOT = "static"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "web/build/static"),
+    os.path.join(BASE_DIR, "web/dist"),
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

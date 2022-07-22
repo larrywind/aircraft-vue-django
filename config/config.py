@@ -50,8 +50,8 @@ def get_local_settings(conf=None):
     return conf_dict  # ReadOnlyDict(conf_dict)
 
 
-CONFIG_SECTIONS = get_local_settings()
+CONFIG_SECTIONS = get_local_settings('app.conf')
 
 CONFIG = dict(CONFIG_SECTIONS["GLOBAL"])
 
-CONFIG.update(CONFIG_SECTIONS["PROD"])
+# CONFIG.update(CONFIG_SECTIONS["PROD"])
