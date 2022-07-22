@@ -23,7 +23,7 @@ os.makedirs('logs', exist_ok=True)
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'df34@dfkj398)-fgwef+bk-w^^80%bmkjd20s+y(887dc)s6s'
+SECRET_KEY = CONFIG['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -64,7 +64,7 @@ ROOT_URLCONF = "webapp.urls"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'web/dist')],
+        'DIRS': [os.path.join(BASE_DIR, 'web/dist/static')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
