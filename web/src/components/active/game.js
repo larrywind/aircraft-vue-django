@@ -137,13 +137,11 @@ function bulletsEvents() {
         scorePanel.text = "得分：" + score
         // 移除障碍物
         obstaclesBoom(o)
-        continue
       } else if (hitTest(obstacles[o], plane)) {
         // 飞机与障碍物碰撞检测
         let _obstacle = obstacles.splice(o, 1)[0]
         _obstacle.destroy()
         gameOver()
-        continue
       } else {
         o++
       }
@@ -197,8 +195,8 @@ function createPlane(resources) {
   // 创建
   let plane = new PIXI.Sprite(resources.plane.texture)
   plane.name = "plane"
-  plane.width = 81
-  plane.height = 100
+  plane.width = 128
+  plane.height = 128
   plane.x = document.body.clientWidth / 2
   plane.y = document.body.clientHeight - plane.height
 
@@ -264,18 +262,18 @@ function createobstacle(gameScene, texture, obstacles, TWEEN, tweens) {
     let enemySprite, enemyWidth, enemyHeight, enemyScore
     if (enemyType == 1) {
       enemySprite = texture.enemy1.texture
-      enemyWidth = 57
-      enemyHeight = 43
+      enemyWidth = 64
+      enemyHeight = 64
       enemyScore = 1
     } else if (enemyType == 2) {
       enemySprite = texture.enemy2.texture
-      enemyWidth = 69
-      enemyHeight = 99
+      enemyWidth = 128
+      enemyHeight = 128
       enemyScore = 2
     } else {
       enemySprite = texture.enemy3.texture
-      enemyWidth = 131
-      enemyHeight = 200
+      enemyWidth = 245
+      enemyHeight = 279
       enemyScore = 3
     }
 

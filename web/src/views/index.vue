@@ -94,9 +94,8 @@ export default {
 .aiagain-wheel {
   width: 100%;
   height: 100vh;
-  background: #c3c8c9;
   background-size: 100%;
-  background-repeat: no-repeat;
+  background: #c3c8c9 no-repeat;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
@@ -108,7 +107,7 @@ export default {
   background-size: 100%;
   margin: 0 auto;
   position: absolute;
-  top: 0.3rem;
+  top: 16%;
   left: 0.5rem;
 }
 
@@ -127,8 +126,8 @@ export default {
 }
 
 .game-startBtn {
-  width: 200px;
-  height: 80px;
+  width: 178px;
+  height: 70px;
   display: block;
   background-size: 100% 100%;
   position: absolute;
