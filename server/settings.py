@@ -64,7 +64,7 @@ ROOT_URLCONF = "webapp.urls"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'web/dist/static')],
+        'DIRS': [os.path.join(BASE_DIR, 'web/dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,10 +135,12 @@ USE_L10N = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 STATIC_ROOT = "static"
+MEDIA_URL = "media/"
+MEDIA_ROOT = "media"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "web/dist/static"),
+    os.path.join(BASE_DIR, "web/dist"),
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
