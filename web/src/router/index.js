@@ -7,6 +7,6 @@ export default new Router({
   // mode:'history',
   routes: [
     // main page
-    {path: '/', name:'', component: resolve => require(['../views/index'],resolve)},
+    {path: '/', name:'', component: resolve => require(['../views/index'], resolve)},
   ]
 })

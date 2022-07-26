@@ -24,7 +24,7 @@ let game = {
   }
 }
 
-//静态资源
+// 静态资源
 const sources = {
   bg: require("@/static/images/bg.png"),
   boom: "./img/boom/boom.json",
