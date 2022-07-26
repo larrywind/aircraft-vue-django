@@ -55,4 +55,4 @@ CONFIG_SECTIONS = get_local_settings('./config/app.conf')
 
 CONFIG = dict(CONFIG_SECTIONS["GLOBAL"])
 
-# CONFIG.update(CONFIG_SECTIONS["PROD"])
+CONFIG.update(CONFIG_SECTIONS["PROD"])
