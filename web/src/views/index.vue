@@ -1,14 +1,14 @@
 <template>
   <div class="Aiagain">
-    <div v-if="!isload" id="loading">
+    <div v-if="!isLoad" id="loading">
       <FadeLoader class="aiagain-loading" color="#666"/>
       <p class="aiagain-loading-text">正在初始化,请稍后...</p>
     </div>
     <div
       v-else
       class="aiagain-wheel"
-      v-bind:class="[!isload ? 'isload' : '']"
-      v-bind:style="{backgroundImage:'url(' + starbg + ')'}"
+      v-bind:class="[!isLoad ? 'isLoad' : '']"
+      v-bind:style="{backgroundImage: 'url(' + homeBg + ')'}"
     >
       <div v-if="!isStart" class="aiagain-title">
         <img :src="title" class="aiagain-title-img" alt=""/>
@@ -25,7 +25,7 @@
 </template>
 <script>
 import FadeLoader from "../packages/spinner/src/FadeLoader.vue";
-import starbg from "../static/images/homeBg.png"
+import homeBg from "../static/images/homeBg.png"
 import title from "../static/images/title.png"
 import startBtn from "../static/images/startBtn.png"
 
@@ -35,17 +35,17 @@ export default {
   },
   data() {
     return {
-      isload: false,
+      isLoad: false,
       isStart: false,
       active: null,
-      starbg: starbg,
+      homeBg: homeBg,
       title: title,
       startBtn: startBtn,
     };
   },
   computed: {},
   created() {
-    this.isload = true
+    this.isLoad = true
   },
   watch: {},
   methods: {
@@ -83,7 +83,7 @@ export default {
   margin: 230px auto 0 auto;
 }
 
-.isload {
+.isLoad {
   opacity: 0;
 }
 

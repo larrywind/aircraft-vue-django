@@ -1,25 +1,25 @@
 <template>
-  <div class="game-page" ref="Game" v-bind:style="{backgroundImage:'url(' + background + ')'}">
+  <div class="game-page" ref="Game" v-bind:style="{backgroundImage: 'url(' + backGround + ')'}">
   </div>
 </template>
 
 <script>
 import game from './game';
-import background from "../../static/images/bg.png"
+import backGround from '../../static/images/bg.png'
 
 export default {
-  name: "Active",
+  name: 'Active',
   data(){
     return {
       layer: true,
       layer2: false,
-      background : background
+      backGround: backGround
     }
   },
   computed: {
   },
   mounted(){
-    game.gameInit(this.$refs.Game,this.$comm);
+    game.gameInit(this.$refs.Game, this.$comm);
   },
   methods:{}
 }

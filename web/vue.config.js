@@ -20,5 +20,13 @@ module.exports = {
       }
     }
   },
+  // 限制静态资源图片最小范围，超过1kb此范围必须转换为base64，避免打包后assets静态图片无法出现
+  chainWebpack: config => {
+      config.module
+      .rule('images')
+      .use('url-loader')
+      .loader('url-loader')
+      .tap(options => Object.assign(options, { limit: 10000 }))
+  },
   lintOnSave: false
 }
