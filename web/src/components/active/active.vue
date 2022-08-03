@@ -5,7 +5,7 @@
 
 <script>
 import game from './game';
-import backGround from '../../static/images/bg.png'
+import backGround from '@/static/images/bg.png'
 
 export default {
   name: 'Active',

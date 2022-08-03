@@ -4,7 +4,7 @@
       <div class="aiagain-Challenge-wrap bounceIn">
         <div class="aiagain-Challenge-head">
           <div class="aiagain-Challenge-head-userimg" v-bind:class="[data.type==2 ? 'aiagain-userimg1' : '']">
-            <img :src="data.userimg"/>
+            <img :src="data.userimg" alt=""/>
           </div>
           <div class="aiagain-Challenge-head-title"
                v-bind:class="[data.type==1 ? 'aiagain-success-bg' : 'aiagain-fail-bg']"></div>
@@ -132,7 +132,6 @@ export default {
 }
 
 .aiagain-Challenge-head-bgShine {
-  position: absolute;
   top: -100px;
   left: -15px;
   width: 400px;

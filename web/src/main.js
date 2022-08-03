@@ -18,7 +18,6 @@ Vue.use(Packages)
 Vue.prototype.$api = lib.core
 Vue.prototype.$util = lib.utils
 Vue.prototype.$service = lib.service
-
 Vue.prototype.$comm = comm
 
 new Vue({
