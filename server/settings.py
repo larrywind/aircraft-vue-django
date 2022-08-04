@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "175.27.157.94",
     "bigwind.cloud",
+    "www.bigwind.cloud",
 ]
 
 # Application definition

@@ -4,6 +4,13 @@
 
 本项目采用vue3+django，实现了一套简单的飞机大战游戏，渲染使用pixijs
 
+## 获取代码
+由于启用了lfs存储，故需要先安装git和git-lfs
+```
+yum install git git-lfs -y
+git clone https://github.com/larrywind/aircraft-vue-django.git
+```
+
 ## 构建项目
 
 需要以下组件：
