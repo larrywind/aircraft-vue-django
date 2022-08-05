@@ -50,7 +50,9 @@ python3 manage.py runserver 0.0.0.0:<your port>
 
 - nginx+uwsgi+django模式
 ```
-bash install_nginx.sh
+bash build.sh
+python3 manage.py runserver 0.0.0.0:<your port>
+bash start_nginx.sh
 ```
 
 ## 附加说明
