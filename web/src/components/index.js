@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Active from './active/index'
 import challenge from './challenge/index'
 
-//添加活动模板
+// 添加活动模板
 Vue.component(Active.name, Active);
 
 let doData = function(data,val){
@@ -23,7 +23,7 @@ let Challenge = function(value={}){
     type : 1,
     userimg: 'http://10.0.4.19/marketing/images/mole/manImg.jpg',
   }
-  let config = doData(data,value)
+  let config = doData(data, value)
   challenge.open(config);
 }
 

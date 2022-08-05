@@ -178,7 +178,7 @@ export default {
   background: #fe8208;
   color: #fff;
   position: fixed;
-  bottom: 120px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
 }

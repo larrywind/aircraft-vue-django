@@ -14,7 +14,7 @@ export default {
     instance.data = options
 
     if (instance.visible) return;
-    
+
     instance.vm = instance.$mount()
 		document.body.appendChild(instance.vm.$el)
 
@@ -27,5 +27,5 @@ export default {
     if (instance) {
       instance.visible = false;
     }
-  }
+  },
 };

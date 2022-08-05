@@ -13,7 +13,7 @@ let texture
 let bullets = [] // 子弹组
 let obstacles = [] // 障碍物组
 let tweens = []
-let total_score = 50 //分数达到才算通过
+let total_score = 0 // 分数达到才算通过
 let score = 0 // 分数
 let scorePanel // 分数记录
 let comm = null
@@ -42,7 +42,7 @@ function gameLoad() {
   }
   loader.load((loader, resources) => {
     // 加载完毕回调
-    gameSetup(resources) //执行创建精灵等操作
+    gameSetup(resources) // 执行创建精灵等操作
     texture = resources
   })
 }
@@ -87,7 +87,7 @@ function gameSetup(resources) {
   gameScene.addChild(bg)
   // 创建分数
   scorePanel = new PIXI.Text("得分：" + score, {
-    fontSize: 10,
+    fontSize: 18,
     fill: "#fff"
   })
   scorePanel.x = 10
@@ -370,7 +370,7 @@ function gameOver() {
   console.log("游戏结束")
   app.ticker.stop()
   let type, list
-  if (score > total_score) {
+  if (score >= total_score) {
     type = 1
     list = ["恭喜您挑战成功!", "你的得分为：" + score]
   } else {
@@ -384,7 +384,7 @@ function gameOver() {
       location.reload(true);
     },
     toFollow: function () {
-      //关注我们
+      // 关注我们
       comm.Follow()
     }
   }
